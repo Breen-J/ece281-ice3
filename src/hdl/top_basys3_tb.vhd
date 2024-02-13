@@ -94,22 +94,22 @@ begin
 	test_process : process 
 	begin
 	
-	    w_sw <= "0"; wait for 10 ns;
-		  assert w_led = "00" report "bad o0" severity failure;
-        w_sw <= "1"; wait for 10 ns;
-          assert w_led = "01" report "bad o1" severity failure;
-        w_sw <= "1"; wait for 10 ns;
-          assert w_led = "10" report "bad o2" severity failure;
-        w_sw <= "0"; wait for 10 ns;
-          assert w_led = "11" report "bad o3" severity failure;
-         w_sw <= "1"; wait for 10 ns;
-          assert w_led = "00" report "bad o4" severity failure;
-         w_sw <= "0"; wait for 10 ns;
+	    w_sw <= o"0"; wait for 10 ns;
+		  assert w_led = "0" report "bad o0" severity failure;
+        w_sw <= o"1"; wait for 10 ns;
+          assert w_led = "1" report "bad o1" severity failure;
+        w_sw <= o"2"; wait for 10 ns;
+          assert w_led = "1" report "bad o2" severity failure;
+        w_sw <= o"3"; wait for 10 ns;
+          assert w_led = "0" report "bad o3" severity failure;
+         w_sw <= o"4"; wait for 10 ns;
+          assert w_led = "1" report "bad o4" severity failure;
+         w_sw <= o"5"; wait for 10 ns;
           assert w_led = "01" report "bad o5" severity failure;          
-         w_sw <= "0"; wait for 10 ns;
-          assert w_led = "10" report "bad o6" severity failure;
-         w_sw <= "1"; wait for 10 ns;
-          assert w_led = "11" report "bad o7" severity failure;        
+         w_sw <= o"6"; wait for 10 ns;
+          assert w_led = "0" report "bad o6" severity failure;
+         w_sw <= o"7"; wait for 10 ns;
+          assert w_led = "1" report "bad o7" severity failure;        
 	    --You must fill in the remaining test cases.	
 	
 		wait; -- wait forever
