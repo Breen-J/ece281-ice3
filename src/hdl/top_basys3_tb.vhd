@@ -72,7 +72,7 @@ architecture test_bench of top_basys3_tb is
 	   -- TODO
 	   
 	   signal w_sw : std_logic_vector (2 downto 0) := "0000";
-	   signal w_led : std_logic_vector (1 downto 0) := "0000";
+	   signal w_led : std_logic_vector (1 downto 0) := "00";
 	   
 	-- finish declaring needed signals
 begin
