@@ -71,8 +71,8 @@ architecture test_bench of top_basys3_tb is
 	-- declare signals needed to stimulate the UUT inputs
 	   -- TODO
 	   
-	   signal w_sw : std_logic_vector (2 downto 0) := "0";
-	   signal w_led : std_logic_vector (1 downto 0) := "0";
+	   signal w_sw : std_logic_vector (2 downto 0) := "0000";
+	   signal w_led : std_logic_vector (1 downto 0) := "0000";
 	   
 	-- finish declaring needed signals
 begin
